@@ -27,6 +27,7 @@
     nmap
     python3
     nodejs
+    nodePackages_latest.pnpm
 
     # Tui
     lazygit
