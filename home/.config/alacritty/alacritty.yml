@@ -1,0 +1,114 @@
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+window:
+  dynamic_padding: true
+  opacity: 0.9
+  padding:
+    x: 10
+    y: 10
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels.
+  # If both are `0`, this setting is ignored.
+  # dimensions:
+  #   columns: 0
+  #   lines: 0
+  # Window position (changes require restart)
+  #
+  # Specified in number of pixels.
+  # If the position is not set, the window manager will handle the placement.
+  position:
+    x: 0
+    y: 0
+
+  # Window decorations
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background, but no title bar buttons
+  decorations: none
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  startup_mode: Maximized
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 3
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: Source Code Pro
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Source Code Pro
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+
+  # Point size
+  size: 6.0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+## Colors (Ayu Dark)
+colors:
+  # Default colors
+  bright:
+    black:   '0x686868'
+    blue:    '0x59C2FF'
+    cyan:    '0x95E6CB'
+    green:   '0xC2D94C'
+    magenta: '0xFFEE99'
+    red:     '0xF07178'
+    white:   '0xFFFFFF'
+    yellow:  '0xFFB454'
+
+  # Normal colors
+  normal:
+    black:   '0x01060E'
+    blue:    '0x53BDFA'
+    cyan:    '0x90E1C6'
+    green:   '0x91B362'
+    magenta: '0xFAE994'
+    red:     '0xEA6C73'
+    white:   '0xC7C7C7'
+    yellow:  '0xF9AF4F'
+
+  # Bright colors
+  primary:
+    background: '0x0A0E14'
+    foreground: '0xB3B1AD'
+
+# Use custom cursor colors. If true, display the cursor in the cursor.foreground
+# and cursor.background colors, otherwise invert the colors of the cursor.
+custom_cursor_colors: true
