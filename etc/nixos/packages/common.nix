@@ -20,5 +20,6 @@
     neofetch
     wget
     stow
+    unzip
   ];
 }
