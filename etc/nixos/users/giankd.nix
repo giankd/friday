@@ -41,6 +41,7 @@ in
       tldr
       duf
       ncdu
+      pandoc
 
       # Web
       brave
