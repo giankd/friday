@@ -28,6 +28,7 @@
     python3
     nodejs
     nodePackages_latest.pnpm
+    nodePackages_latest.prettier
 
     # Tui
     lazygit
