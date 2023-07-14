@@ -1,0 +1,4 @@
+alias -g exll='exa -a -l -b --header --git'
+alias -g extr='exa -T -L=3 -b'
+alias -g tmx='tmux has-session &>/dev/null && tmux attach || tmux'
+alias -g lzg='lazygit --use-config-file="$HOME/.config/lazygit/config.yml"'

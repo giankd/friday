@@ -18,8 +18,8 @@ export PATH="$HOME/.local/bin:$HOME/.local/bin/tmux-commands/:$PATH"
 [[ ! -f ~/.zsh/.aliases ]] || source ~/.zsh/.aliases
 
 # === Functions ===
-#fpath=( ~/.zsh/.fn "${fpath[@]}" )
-#autoload -Uz $fpath[1]/*(.:t)
+fpath=( ~/.zsh/.fn "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
 
 # === Fzf ===
 if [ -n "${commands[fzf-share]}" ]; then
