@@ -13,6 +13,6 @@
       ../services/sound.nix
       ../services/printing.nix
       ../services/ssh.nix
-      # "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/lenovo/thinkpad/e470"
+      "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/lenovo/thinkpad/t480"
     ];
 }

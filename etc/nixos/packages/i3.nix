@@ -51,8 +51,12 @@
     };
   };
 
-  environment.systemPackages = let themes = pkgs.callPackage ./sddm-themes.nix {}; in [ 
+  environment.systemPackages = let themes = pkgs.callPackage ./sddm-themes.nix {}; in [
     pkgs.libsForQt5.qt5.qtgraphicaleffects
-    themes.sddm-sugar-dark 
+    themes.sddm-sugar-dark
   ];
+
+  # This enables udev permission
+  # https://github.com/NixOS/nixpkgs/issues/48623#issuecomment-1454072426
+  programs.light.enable = true;
 }
