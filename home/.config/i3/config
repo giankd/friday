@@ -36,8 +36,8 @@ new_window pixel 2
 # Gaps
 smart_gaps off
 hide_edge_borders none
-gaps inner 25
-gaps outer 75
+gaps inner 10
+gaps outer 25
 for_window [class=".*"] border pixel 1
 
 # Mouse
