@@ -6,7 +6,7 @@ function startssh() {
         # Do something knowing the pid exists, i.e. the process with $PID is running
     else
         eval "$(ssh-agent -s)"
-        ssh-add "$HOME/.ssh/gg_github"
+        ssh-add "$HOME/.ssh/id_friday_giankd"
     fi
 }
 startssh
