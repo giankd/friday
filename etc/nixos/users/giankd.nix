@@ -36,12 +36,14 @@ in
       exa
       bat
       htop
+      nvtop
       trash-cli
       fzf
       tldr
       duf
       ncdu
       pandoc
+      fltk14
 
       # Web
       brave
@@ -50,7 +52,7 @@ in
       wordgrinder
       thunderbird
       _1password-gui
-      # bitwarden
+      vlc
     ];
     shell = pkgs.zsh;
     initialPassword = "toor";

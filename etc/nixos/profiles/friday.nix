@@ -13,6 +13,7 @@
       ../services/sound.nix
       ../services/printing.nix
       ../services/ssh.nix
+      ../services/nvidia.nix
       "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/lenovo/thinkpad/t480"
     ];
 }

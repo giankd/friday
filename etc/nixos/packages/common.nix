@@ -21,5 +21,6 @@
     wget
     stow
     unzip
+    pciutils
   ];
 }
