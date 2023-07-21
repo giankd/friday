@@ -7,7 +7,7 @@
       tapping = true;
       disableWhileTyping = false;
       clickMethod = "clickfinger";
-      naturalScrolling = false;
+      naturalScrolling = true;
     };
   };
 }
