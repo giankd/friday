@@ -3,7 +3,7 @@ modi: "window,drun,ssh,run";
 /*  width: 50;*/
 /*  lines: 15;*/
 /*  columns: 2;*/
-font: "JetBrains Regular 12";
+font: "JetBrains Regular 10";
 /*  bw: 1;*/
 /*  location: 0;*/
 /*  padding: 5;*/

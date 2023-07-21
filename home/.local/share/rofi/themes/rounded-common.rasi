@@ -5,7 +5,7 @@
  *******************************************************************************/
 
 * {
-    font:   "Roboto 12";
+    font:   "Noto Sans 10";
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -45,7 +45,7 @@ prompt {
 }
 
 entry {
-    placeholder:        "Search";
+    placeholder:        "Launch";
     placeholder-color:  @fg3;
 }
 
