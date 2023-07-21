@@ -29,6 +29,8 @@
     nodejs
     nodePackages_latest.pnpm
     nodePackages_latest.prettier
+    rustc
+    go
 
     # Tui
     lazygit
