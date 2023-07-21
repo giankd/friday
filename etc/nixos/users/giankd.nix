@@ -44,6 +44,7 @@ in
       ncdu
       pandoc
       fltk14
+      wgnord
 
       # Web
       brave
@@ -53,6 +54,12 @@ in
       thunderbird
       _1password-gui
       vlc
+      qbittorrent
+      wpsoffice # Office
+      gimp # Photoshop
+      inkscape-with-extensions # Illustrator
+      scribus # Indesign
+      openshot-qt # Premiere
     ];
     shell = pkgs.zsh;
     initialPassword = "toor";
