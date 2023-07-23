@@ -42,10 +42,9 @@
       xterm.enable = false;
     };
     displayManager = {
-      # gdm = {
       sddm = {
         enable = true;
-	theme = "sugar-dark";
+	    theme = "sugar-dark";
       };
       defaultSession = "none+i3";
     };
