@@ -44,7 +44,6 @@ in
       ncdu
       pandoc
       fltk14
-      wgnord
 
       # Web
       brave

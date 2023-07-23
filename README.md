@@ -20,6 +20,14 @@ I have two machines currently based on Nixos, and a machine based on Macos.
 * **Low resources** used
 * **Colors and palette**: Mostly [Nord Theme](https://www.nordtheme.com/docs/colors-and-palettes)
 
+## NordVPN and WireGuard
+
+This config uses `wgnord` to write a config file imported in `NetworkManager`:
+
+- `wgnord l <your-nordvpn-token>`
+- `wgnord c <country> -o /path/to/config` (`wgnord` fails to connect via `wg-qwick`, it is intended)
+- Import the config file generated in NetworkManager via GUI (simplest way)
+
 ### Credits
 
 > Freely inspired by [Wabri's Dotfiles (Fabulinus)](https://github.com/Wabri/dotfiles/tree/main/profiles/Fabulinus)
