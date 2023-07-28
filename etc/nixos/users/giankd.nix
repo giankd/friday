@@ -59,6 +59,8 @@ in
       inkscape-with-extensions # Illustrator
       scribus # Indesign
       openshot-qt # Premiere
+      unityhub
+      blender
     ];
     shell = pkgs.zsh;
     initialPassword = "toor";
