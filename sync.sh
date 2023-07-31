@@ -12,7 +12,7 @@ fi
 
 echo "linking home directory"
 ## Symlink config files
-stow -v -R --target=$ROOT_USER_FOLDER --dir=./home .
+stow -v -R --no-folding --target=$ROOT_USER_FOLDER --dir=./home .
 
 echo "copying nixos dir (needs root permission!)"
 sudo cp ./etc/nixos/bootloader.nix /etc/nixos/

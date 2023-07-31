@@ -14,7 +14,8 @@ export PATH="$HOME/.local/bin:$HOME/.local/bin/tmux-commands/:$PATH"
 
 # === Functions ===
 fpath=( ~/.zsh/.fn "${fpath[@]}" )
-autoload -Uz $fpath[1]/*(.:t)
+# autoload -Uz $fpath[1]/\*(.:t) # More performant, but not working with symlink
+autoload -Uz $fpath[1]/**/*
 
 # === Fzf ===
 if [ -n "${commands[fzf-share]}" ]; then
