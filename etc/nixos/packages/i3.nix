@@ -26,7 +26,6 @@
         light
         font-manager
         networkmanagerapplet
-        blueberry
         xfce.thunar
         pavucontrol
         batsignal

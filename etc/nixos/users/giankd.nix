@@ -24,6 +24,7 @@ in
       "libvirtd"
       "storage"
       "input"
+      # "lp" # Bluetooth - https://github.com/NixOS/nixpkgs/issues/20864#issuecomment-270630266
     ];
     packages = with pkgs; [
       # Shell
@@ -71,7 +72,6 @@ in
     enable = true;
     ohMyZsh.enable = true;
     enableCompletion = true;
-    # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
   };
 
   # Editor

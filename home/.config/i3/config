@@ -332,7 +332,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 # Bluetooth
-exec --no-startup-id blueberry-tray
+exec --no-startup-id blueman-applet
 
 # Network
 exec --no-startup-id nm-applet
@@ -359,8 +359,7 @@ default_floating_border none
 # set floating (nontiling)for apps needing it
 for_window [window_role="About"] floating enable
 for_window [class="Arandr"] floating enable
-for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="(?i)blueman"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="ObinsKit"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
