@@ -1,0 +1,59 @@
+PROVIDED_PATH="${1}"
+
+if [[ -z "$1" ]]; then
+    echo "ERROR: Provide a path to file or directory"
+    return
+fi
+
+install () {
+    local FILE_PATH=$(readlink -f "$1")
+    if [[ -z "$FILE_PATH" ]]; then
+        echo "ERROR: Provide a valid path"
+        return
+    fi
+    if [[ ! -f "$FILE_PATH" ]]; then
+        echo "ERROR: $FILE_PATH is not valid file"
+        return
+    fi
+
+    local FILENAME=`echo $FILE_PATH | awk 'BEGIN { FS = "/" } ; { print $NF }'`
+    local INSTALL_PATH="$HOME/.local/share/fonts"
+    echo "Installing: $FILENAME into $INSTALL_PATH"
+
+    if $(cp "$FILE_PATH" "$INSTALL_PATH" &> /dev/null); then
+        sleep 0.1
+    else
+        echo "Cannot copy $FILENAME to local files"
+        return
+    fi
+
+    if $(fc-cache); then
+        sleep 0.1
+    else
+        echo "Error cleaning cache"
+        return
+    fi
+
+    if $(fc-list : file | grep -i "\b$FILENAME\b" &> /dev/null); then
+        echo "$FILENAME installed successfully"
+        return
+    else
+        echo "Cannot install $FILENAME"
+        return
+    fi
+}
+
+if [[ -d "$PROVIDED_PATH" ]]; then
+    ABSOLUTE_PATH=$(readlink -f "$PROVIDED_PATH")
+
+    ls -f "$ABSOLUTE_PATH" | awk 'BEGIN { FS="." } ; {
+        if ($NF == "ttf" || $NF == "otf")
+            print $0
+    }' | while read -r FILE_NAME; do install "$ABSOLUTE_PATH/$FILE_NAME"; done
+
+elif [[ -f "$PROVIDED_PATH" ]]; then
+    install "$PROVIDED_PATH"
+else
+    echo "ERROR: Cannot find $PROVIDED_PATH"
+fi
+
