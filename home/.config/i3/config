@@ -19,7 +19,7 @@ font pango:Source Code Pro 10
 #######################
 # Colors setup
 # class                 border  backgr. text    indicator child_border
-client.focused          #4C566A #81A1C1 #2E3440 #EBCB8B   #81A1C1
+client.focused          #4C566A #81A1C1 #2E3440 #81A1C1   #6A7C8D
 client.focused_inactive #2E3440 #4C566A #ECEFF4 #8FBCBB   #434C5E
 client.unfocused        #2E3440 #2E3440 #4C566A #8FBCBB   #3B4252
 client.urgent           #BF616A #BF616A #2E3440 #BF616A   #BF616A
@@ -36,8 +36,8 @@ new_window pixel 2
 # Gaps
 smart_gaps off
 hide_edge_borders none
-gaps inner 10
-gaps outer 25
+gaps inner 8
+gaps outer 20
 for_window [class=".*"] border pixel 1
 
 # Mouse
