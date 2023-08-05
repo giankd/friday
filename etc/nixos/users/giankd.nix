@@ -62,6 +62,8 @@ in
       openshot-qt # Premiere
       unityhub
       blender
+      telegram-desktop
+      discord
     ];
     shell = pkgs.zsh;
     initialPassword = "toor";
