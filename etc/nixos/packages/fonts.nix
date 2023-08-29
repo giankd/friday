@@ -3,6 +3,7 @@
 {
   # Fonts
   fonts.fonts = with pkgs; [
+    jetbrains-mono
     iosevka
     powerline-fonts
     nerdfonts

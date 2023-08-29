@@ -145,6 +145,9 @@ bindsym $mod+Shift+n exec dunstctl close-all
 #######################
 # === Modes ===========
 #######################
+# Modes Help
+bindsym $mod+z exec notify-send --expire-time=10000 --urgency=low 'Available Modes' "$(echo -e "\nSq => System Mode : Shutdown and system status operations \n r => Resize Mode : Resize focused window \n Sw => Workspace Mode : Switch Focus and Move windows \n d => Display Mode : Change display config \n s => Media Mode : Controls Players")"
+
 # System
 set $mode_system System
 mode "$mode_system" {
@@ -215,6 +218,21 @@ mode "$output_move" {
 }
 bindsym $mod+Shift+m mode "$output_move", exec notify-send --expire-time=1500 --urgency=critical "Output Mode"
 
+set $display_mode Display
+mode "$display_mode" {
+
+    # Secondary screen orientation
+    # bindsym h exec ~/.screenlayout/left.sh, exec sleep 2 && nitrogen --restore && ~/.config/polybar/launch.sh, mode "default"
+    # bindsym k exec ~/.screenlayout/up.sh, exec sleep 2 && nitrogen --restore && ~/.config/polybar/launch.sh, mode "default"
+    # bindsym s exec ~/.screenlayout/solo.sh, exec sleep 2 && nitrogen --restore && ~/.config/polybar/launch.sh, mode "default"
+
+    bindsym f exec ~/.screenlayout/big_screen.sh, exec sleep 2 && nitrogen --restore, mode "default"
+    bindsym s exec ~/.screenlayout/default.sh, exec sleep 2 && nitrogen --restore, mode "default"
+
+    bindsym q mode "default", exec notify-send --expire-time=1000 --urgency=normal "Exit Display Mode"
+    bindsym Escape mode "default", exec notify-send --expire-time=1000 --urgency=normal "Exit Display Mode"
+}
+bindsym $mod+d mode "$display_mode", exec notify-send --expire-time=1500 --urgency=critical "Display Mode" "$(echo -e "f -> Big Display \n s -> Solo")"
 # Media
 #          
 set $media_mode Media
@@ -283,16 +301,16 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 # bind program to workspace and focus to them on startup:
 assign [class="(?i)alacritty"] → $ws1
 assign [class="(?i)brave"] $ws2
-assign [class="(?i)telegramdesktop"] → $ws3
-assign [class="(?i)discord"] → $ws3
-assign [class="(?i)qbittorrent"] → $ws3
-assign [class="(?i)unityhub"] → $ws4
-assign [class="(?i)wpsoffice"] → $ws4
-assign [class="(?i)openshot"] → $ws4
-assign [class="(?i)blender"] → $ws5
-assign [class="(?i)inkscape"] → $ws5
-assign [class="(?i)gimp"] → $ws5
+assign [class="(?i)unityhub"] → $ws3
+assign [class="(?i)wpsoffice"] → $ws3
+assign [class="(?i)openshot"] → $ws3
+assign [class="(?i)blender"] → $ws4
+assign [class="(?i)inkscape"] → $ws4
+assign [class="(?i)gimp"] → $ws4
 assign [class="(?i)vlc"] → $ws5
+assign [class="(?i)telegramdesktop"] → $ws5
+assign [class="(?i)discord"] → $ws5
+assign [class="(?i)qbittorrent"] → $ws5
 assign [class="(?i)virt-manager"] → $ws6
 assign [class="(?i)bitwarden"] → $ws7
 assign [class="(?i)steam"] → $ws8
@@ -371,7 +389,7 @@ for_window [class="1Password"] floating enable
 #######################
 
 # Polybar
-# exec_always ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 #######################
 # === Apps ============

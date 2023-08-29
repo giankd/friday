@@ -178,7 +178,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 3
+    corner_radius = 1
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -383,5 +383,9 @@
 [stack-volumes]
     appname = "some_volume_notifiers"
     set_stack_tag = "volume"
+
+[play_sound]
+    summary = "*"
+    script = ~/.config/dunst/notify_sound.sh
 #
 # vim: ft=cfg
