@@ -30,6 +30,8 @@
     nodePackages_latest.pnpm
     nodePackages_latest.prettier
     rustc
+    dotnet-sdk_8
+    mono
     go
 
     # Tui
