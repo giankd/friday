@@ -8,6 +8,7 @@
       ../configurations/time.nix
       ../configurations/virtualisation.nix
       ../packages/common.nix
+      ../services/tlp.nix
       ../services/bluetooth.nix
       ../services/layout.nix
       ../services/libinput.nix
